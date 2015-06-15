@@ -1,6 +1,6 @@
 # vtt-to-srt
 
-Convert Web VTT (The Web Video Text Tracks Format, aka html5 video subtitles) into SubRip SRT.
+Convert [WebVTT](http://dev.w3.org/html5/webvtt/) (The Web Video Text Tracks Format, aka html5 video subtitles) into SubRip SRT.
 
 It is a clone project from [srt-to-vtt](https://github.com/mafintosh/srt-to-vtt)
 
