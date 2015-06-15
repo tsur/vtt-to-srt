@@ -1,0 +1,36 @@
+{
+  "name": "vtt-to-srt",
+  "version": "0.0.1",
+  "description": "Convert Web VTT(The Web Video Text Tracks Format, aka html5 video subtitles) into SubRip SRT",
+  "author": "Zuri Pabon (@tsurshaddai)<zurisadai.pabon@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js",
+    "build": "babel index.es6 > index.js"
+  },
+  "dependencies": {
+    "pumpify": "^1.3.3",
+    "split2": "^0.2.1",
+    "through2": "^0.6.3"
+  },
+  "devDependencies": {
+    "babel": "^5.5.8",
+    "concat-stream": "^1.4.10",
+    "tape": "^3.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsur/vtt-to-srt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tsur/vtt-to-srt/issues"
+  },
+  "homepage": "https://github.com/tsur/vtt-to-srt",
+  "keywords": [
+    "webvtt",
+    "srt",
+    "subtitles",
+    "html5"
+  ]
+}
