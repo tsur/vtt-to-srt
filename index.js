@@ -20,22 +20,13 @@ var _pumpify2 = _interopRequireDefault(_pumpify);
 
 exports['default'] = function () {
 
-  var block = [];
-
   var write = function write(line, enc, cb) {
 
-    if (line.trim()) {
+    if (!line.trim()) return cb();
 
-      block.push(line.trim());
-      return cb();
-    }
+    var vttLine = line.replace(/(WEBVTT\s*FILE?.*)(\r\n)*/g, '').replace(/(\d{2}:\d{2}:\d{2})\.(\d{3}\s+)\-\-\>(\s+\d{2}:\d{2}:\d{2})\.(\d{3}\s*)/g, '$1,$2-->$3,$4').replace(/\<.+\>(.+)/g, '$1').replace(/\<.+\>(.+)\<.+\/\>/g, '$1') + '\r\n';
 
-    var vttLine = block.join('\r\n').replace(/(WEBVTT\s*FILE?.*)(\r\n)*/g, '').replace(/(\d{2}:\d{2}:\d{2})\.(\d{3}\s+)\-\-\>(\s+\d{2}:\d{2}:\d{2})\.(\d{3}\s*)/g, '$1,$2-->$3,$4').replace(/\<.+\>(.+)/g, '$1').replace(/\<.+\>(.+)\<.+\/\>/g, '$1') + '\r\n';
-
-    // console.log('LINE:', block.join('\r\n'));
-    // console.log('REPLACE', vttLine);
-
-    block = [];
+    if (!vttLine.trim()) return cb();
 
     cb(null, vttLine);
   };

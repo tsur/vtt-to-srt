@@ -30,7 +30,7 @@ tape('one entry', function(t) {
 
   convert.pipe(concat(function(data) {
 
-    t.same(data.toString(), '\r\n1\r\n00:00:10,500 --> 00:00:13,000\r\nthis is a test\r\n');
+    t.same(data.toString(), '1\r\n00:00:10,500 --> 00:00:13,000\r\nthis is a test\r\n');
 
     t.end();
 
@@ -48,7 +48,7 @@ tape('two entries', function(t) {
 
   convert.pipe(concat(function(data) {
 
-    t.same(data.toString(), '\r\n1\r\n00:00:10,500 --> 00:00:13,000\r\nthis is a test\r\n2\r\n00:00:14,500 --> 00:00:15,000\r\nthis is a test\r\n');
+    t.same(data.toString(), '1\r\n00:00:10,500 --> 00:00:13,000\r\nthis is a test\r\n2\r\n00:00:14,500 --> 00:00:15,000\r\nthis is a test\r\n');
 
     t.end();
 

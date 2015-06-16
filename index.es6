@@ -4,32 +4,21 @@ import pumpify from 'pumpify';
 
 export default function() {
 
-  let block = [];
+  const write = (line, enc, cb) => {
 
-  var write = function(line, enc, cb) {
+      if(!line.trim()) return cb();
 
-    if (line.trim()) {
-
-      block.push(line.trim());
-      return cb();
-
-    }
-
-    const vttLine = block.join('\r\n')
+      const vttLine = line
       .replace(/(WEBVTT\s*FILE?.*)(\r\n)*/g, '')
       .replace(/(\d{2}:\d{2}:\d{2})\.(\d{3}\s+)\-\-\>(\s+\d{2}:\d{2}:\d{2})\.(\d{3}\s*)/g, '$1,$2-->$3,$4')
       .replace(/\<.+\>(.+)/g, '$1')
-      .replace(/\<.+\>(.+)\<.+\/\>/g, '$1')
-      +'\r\n';
+      .replace(/\<.+\>(.+)\<.+\/\>/g, '$1')+'\r\n';
 
-    // console.log('LINE:', block.join('\r\n'));
-    // console.log('REPLACE', vttLine);
+      if(!vttLine.trim()) return cb();
 
-    block = [];
-
-    cb(null, vttLine);
+      cb(null, vttLine);
     
-  }
+  };
 
   return pumpify(split(), through.obj(write));
 

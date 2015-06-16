@@ -1,10 +1,11 @@
 {
   "name": "vtt-to-srt",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Convert Web VTT(The Web Video Text Tracks Format, aka html5 video subtitles) into SubRip SRT",
   "author": "Zuri Pabon (@tsurshaddai)<zurisadai.pabon@gmail.com>",
   "license": "MIT",
   "main": "index.js",
+  "bin": "cli.js",
   "scripts": {
     "test": "tape test.js",
     "build": "babel index.es6 > index.js"
