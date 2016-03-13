@@ -9,7 +9,7 @@ export default function() {
       if(!line.trim()) return cb();
 
       const vttLine = line
-      .replace(/(WEBVTT\s*FILE?.*)(\r\n)*/g, '')
+      .replace(/(WEBVTT\s*(FILE)?.*)(\r\n)*/g, '')
       .replace(/(\d{2}:\d{2}:\d{2})\.(\d{3}\s+)\-\-\>(\s+\d{2}:\d{2}:\d{2})\.(\d{3}\s*)/g, '$1,$2-->$3,$4')
       .replace(/\<.+\>(.+)/g, '$1')
       .replace(/\<.+\>(.+)\<.+\/\>/g, '$1')+'\r\n';
