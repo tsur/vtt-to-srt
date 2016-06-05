@@ -1,6 +1,6 @@
 {
   "name": "vtt-to-srt",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Convert Web VTT(The Web Video Text Tracks Format, aka html5 video subtitles) into SubRip SRT",
   "author": "Zuri Pabon (@tsurshaddai)<zurisadai.pabon@gmail.com>",
   "license": "MIT",
@@ -16,7 +16,8 @@
     "through2": "^0.6.3"
   },
   "devDependencies": {
-    "babel": "^5.5.8",
+    "babel-core": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
     "concat-stream": "^1.4.10",
     "tape": "^3.0.3"
   },

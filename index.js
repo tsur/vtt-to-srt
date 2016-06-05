@@ -1,24 +1,20 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
+var _through = require('through2');
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+var _through2 = _interopRequireDefault(_through);
 
-var _through2 = require('through2');
+var _split = require('split2');
 
-var _through22 = _interopRequireDefault(_through2);
-
-var _split2 = require('split2');
-
-var _split22 = _interopRequireDefault(_split2);
+var _split2 = _interopRequireDefault(_split);
 
 var _pumpify = require('pumpify');
 
 var _pumpify2 = _interopRequireDefault(_pumpify);
 
-exports['default'] = function () {
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = function () {
 
   var write = function write(line, enc, cb) {
 
@@ -31,8 +27,6 @@ exports['default'] = function () {
     cb(null, vttLine);
   };
 
-  return (0, _pumpify2['default'])((0, _split22['default'])(), _through22['default'].obj(write));
+  return (0, _pumpify2.default)((0, _split2.default)(), _through2.default.obj(write));
 };
-
-module.exports = exports['default'];
 

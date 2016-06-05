@@ -2,7 +2,7 @@ import through from  'through2';
 import split from 'split2';
 import pumpify from 'pumpify';
 
-export default function() {
+module.exports = function() {
 
   const write = (line, enc, cb) => {
 
@@ -22,4 +22,4 @@ export default function() {
 
   return pumpify(split(), through.obj(write));
 
-}
+};

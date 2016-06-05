@@ -1,0 +1,15 @@
+1
+00:11.000 --> 00:13.000 vertical:rl
+We are in New York City
+2
+00:13.000 --> 00:16.000
+We're actually at the Lucern Hotel, just down the street
+3
+00:16.000 --> 00:18.000
+from the American Museum of Natural History
+4
+00:18.000 --> 00:20.000
+And with me is Neil deGrasse Tyson
+5
+00:20.000 --> 00:22.000
+Astrophysicist, Director of the Hayden Planetarium
