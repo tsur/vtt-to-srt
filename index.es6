@@ -16,6 +16,10 @@ module.exports = function() {
 
       if(!vttLine.trim()) return cb();
 
+      if (/^[0-9]+$/m.test(vttLine)) {
+        vttLine = '\r\n' + vttLine;
+      }
+
       cb(null, vttLine);
     
   };
