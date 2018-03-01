@@ -16,6 +16,7 @@
     "through2": "^0.6.3"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.9.1",
     "babel-preset-es2015": "^6.9.0",
     "concat-stream": "^1.4.10",
